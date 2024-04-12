@@ -4,7 +4,7 @@ This is Allan Rivera Jaramillo main.py file
 Working with Maria Ilieva
 """
 
-# Allan's encode password
+# Allan's encode password function
 """
 I used Lists in order to encode the password.
 1) turn it into a list of strings
@@ -30,10 +30,29 @@ def encode(password):
     return ''.join(z)
 
 
-# Maria's Decode Password
+# Maria's Decode Password function
 def decode(password):
     pass
 
-# if __name__ == '__main__':
-#     while True:
-#         break
+
+def menu():
+    print("Menu")
+    print("-" * 13)
+    print("1. Encode")
+    print("2. Decode")
+    print("3. Quit")
+
+
+if __name__ == '__main__':
+    while True:
+        menu()
+        choice = input("\nPlease enter an option: ")
+        if choice == "1":
+            pass_to_encode = input("Please enter your password to encode: ")
+            encoded_password = encode(pass_to_encode)
+            print("Your password has been encoded and stored!\n")
+        elif choice == "2":
+            print(f"The encoded password is: {encoded_password},"
+                  f" and the original password is {decode(encoded_password)}\n")
+        elif choice == "3":
+            break
