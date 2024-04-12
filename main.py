@@ -32,7 +32,11 @@ def encode(password):
 
 # Maria's Decode Password function
 def decode(password):
-    pass
+    pass_decoded = ""
+    for num in password:
+        shifted_num = str((int(num) + 3) % 10)
+        pass_decoded += shifted_num
+    return pass_decoded
 
 
 def menu():
